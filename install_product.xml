@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<agent-input>
+  <variables>
+    <variable name='sharedLocation' value='C:\Program Files\IBM\IBMIMShared'/>
+  </variables>
+  <server>
+    <repository location='C:\Users\admin\AppData\Local\Temp\IBMIM1486032338897650657.tmp'/>
+    <repository location='C:\Users\admin\Desktop\RTW_SETUP_9.1\RTW_SETUP'/>
+  </server>
+  <profile id='IBM Installation Manager' installLocation='C:\Program Files\IBM\Installation Manager\eclipse' kind='self'>
+    <data key='cic.selector.arch' value='x86_64'/>
+  </profile>
+  <install>
+    <!-- IBM® Installation Manager 1.8.6 -->
+    <offering profile='IBM Installation Manager' id='com.ibm.cic.agent' version='1.8.6000.20161118_1611' features='agent_core,agent_jre,agent_web'/>
+  </install>
+  <profile id='IBM Rational Integration Tester' installLocation='C:\Program Files\IBM\RationalIntegrationTester'>
+    <data key='cic.selector.arch' value='x86_64'/>
+  </profile>
+  <install>
+    <!-- IBM® Rational® Integration Tester 9.1.0 -->
+    <offering profile='IBM Rational Integration Tester' id='com.ibm.rational.ritw.offering' version='9.1.0.I20170306_1448' features='main.feature,pcap.feature'/>
+  </install>
+  <profile id='IBM Software Delivery Platform' installLocation='C:\Program Files\IBM\SDP'>
+    <data key='cic.selector.arch' value='x86_64'/>
+    <data key='user.RPT_MX_VALUE' value='-Xmx1023m'/>
+    <data key='user.RCL_PortAtHost' value='27000@192.168.10.11'/>
+  </profile>
+  <install>
+    <!-- IBM® Rational® Functional Tester 9.1 -->
+    <offering profile='IBM Software Delivery Platform' id='com.ibm.rational.functional.tester' version='9.1.0.RFTO91-I20170307_0452' features='com.ibm.rft.agent,com.ibm.rft.java'/>
+    <!-- IBM® Rational® Performance Tester 9.1 -->
+    <offering profile='IBM Software Delivery Platform' id='com.ibm.rational.performance.tester' version='9.1.0.RPTO91-I20170307_1820' features='com.ibm.rpt.sdpcore,com.ibm.rpt.doc-isv,com.ibm.rpt.standard,com.ibm.rational.test.lt.http.feature,com.ibm.rational.test.lt.socket.feature,com.ibm.rpt.tn3270.extension'/>
+  </install>
+  <preference name='com.ibm.cic.common.core.preferences.eclipseCache' value='${sharedLocation}'/>
+</agent-input>

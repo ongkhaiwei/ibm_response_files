@@ -1,0 +1,1 @@
+RTW_SETUP\InstallerImage_win32_win32_x86_64\installc.exe input install_product.xml -log install_product.log -acceptLicense
